@@ -191,9 +191,10 @@ input[type="range"] {
             inscreva-se no canal KN XITS FF!
         </div>
 
-        <button class="popup-btn" onclick="window.open('https://www.youtube.com/@knxits','_blank')">
-            INSCREVER-SE
-        </button>
+        <button class="popup-btn" onclick="fecharEIr()">
+    INSCREVER-SE
+</button>
+
 
     
     </div>
@@ -380,6 +381,19 @@ document.querySelectorAll(".mode-btn").forEach(b => {
     };
 });
 // Mostra o popup quando a página carrega
+window.onload = () => {
+    document.getElementById("popup").style.display = "flex";
+};
+
+    function fecharEIr() {
+    // Fecha o popup na hora
+    document.getElementById('popup').style.display = 'none';
+
+    // Abre o canal
+    window.open('https://www.youtube.com/@knxits', '_blank');
+}
+
+// Mostra o popup ao carregar
 window.onload = () => {
     document.getElementById("popup").style.display = "flex";
 };
